@@ -9,6 +9,11 @@
 
 .nav-main {
 	height: 120px;
+	background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0,0,0,0.85), transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0.85), transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0.85), transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0.85), transparent); /* Standard syntax (must be last) */
 }
 
 .nav-main a {
@@ -17,10 +22,10 @@
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 1.1px;
-  -webkit-transition: 300ms ease-in;
-  -moz-transition: 300ms ease-in;
-  -o-transition: 300ms ease-in;
-  transition: 300ms ease-in;
+  -webkit-transition: 150ms ease-in;
+  -moz-transition: 150ms ease-in;
+  -o-transition: 150ms ease-in;
+  transition: 150ms ease-in;
 }
 
 .nav-main a:hover {
@@ -121,11 +126,14 @@
 }
 
 .banner-header-sub {
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 40px;
 	font-weight: 200;
 	color: #d8d7d7;
 	font-size: 24px;
 	text-align: center;
+	max-width: 600px;
 }
 
 /*----------------- FORM SECTION -------------------*/
