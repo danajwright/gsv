@@ -1,0 +1,23 @@
+{
+  "name": "gsv",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danajwright/gsv.git"
+  },
+  "author": "dana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danajwright/gsv/issues"
+  },
+  "homepage": "https://github.com/danajwright/gsv#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}
