@@ -260,7 +260,9 @@
 
 
 
-
+.states-section {
+	display: none;
+}
 
 
 
@@ -326,6 +328,35 @@
 }
 
 
+/*----------------- STATES SECTION -------------------*/
+
+
+.states-section {
+	display: block;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 60px;
+	padding-bottom: 60px;  
+	background-color: #f8f8f8;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.states-header {
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: 800;
+	text-align: center;
+}
+
+.states-list {
+	margin-top: 40px;
+	color: #b3b3b3;
+	font-size: 15.5px;
+	line-height: 27px;
+	color: #666;
+	font-family: 'Arial', sans-serif;
+}
 
 
 @media (min-width: 991px) {
