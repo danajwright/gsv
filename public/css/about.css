@@ -176,8 +176,9 @@
 }
 
 .who-ul li i {
-	margin-right: 10px;
-	color: #07AB46;
+	font-size: 21px;
+	margin-right: 15px;
+	color: #666;
 }
 
 .who-img {
