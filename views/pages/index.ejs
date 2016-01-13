@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GSV</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/gsv.css">
-	<link rel="stylesheet" href="css/modal.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/nav.js"></script>
+	<% include ../partials/head %>
 </head>
 
 <body>
@@ -84,12 +75,17 @@
 			<div class="quote-container clearfix">
 				<input type="text" name="email" class="pull-left" id="what-field" placeholder="What would you like to ship?">
 				<input type="text" name="email" class="pull-left" id="zip-field" placeholder="ZIP Code">
-				<a class="search-btn pull-left" data-toggle="modal" data-target="#demo-modal">Get a Quote</a>
+				<a class="search-btn pull-left" data-toggle="modal" data-target="#quote-modal">Get a Quote</a>
 			</div>
 		</div>
 
 	</section>
-	</div>
+
+	</div>	<!-- CLOSE COVER IMG -->
+
+
+	<!-- QUOTE MODAL -->
+	<% include ../partials/modal-quote %>
 
 
 	<!-- STEPS -->
@@ -205,141 +201,11 @@
 
 
 	<!-- LOGOS -->
-
-	<section class="logos clearfix">
-		<div class="constrainer">
-
-			<div class="section-wrap">
-				<h1 class="section-header">We are only as good as our last transaction</h1>
-				<span class="section-bullet">Our Customers</span>
-			</div>
-
-			<div class="logos-wrap row clearfix">
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Albertsons" src="img/customer-logos/albertsons.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Apple" src="img/customer-logos/apple.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Ch-Robinson" src="img/customer-logos/ch-robinson.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Coca-Cola" src="img/customer-logos/coke.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="CVS" src="img/customer-logos/cvs.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Echo" src="img/customer-logos/echo.png">
-				</div>
-			</div>
-
-			<div class="logos-wrap row clearfix">
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="JB-Hunt" src="img/customer-logos/jb-hunt.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Pepsi" src="img/customer-logos/pepsi.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="RCA" src="img/customer-logos/rca.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Yokohama" src="img/customer-logos/yokohama.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Safeway" src="img/customer-logos/safeway.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Samsung" src="img/customer-logos/samsung.png">
-				</div>
-			</div>
-
-
-			<div class="logos-wrap row clearfix">
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Sony" src="img/customer-logos/sony.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Target" src="img/customer-logos/target.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Toyota" src="img/customer-logos/toyota.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Walgreens" src="img/customer-logos/walgreens.png">
-				</div>
-				<div class="logos-list col-xs-6 col-sm-2">
-					<img title="Walmart" src="img/customer-logos/walmart.png">
-				</div>
-			</div>
-
-		</div>
-	</section>
+	<% include ../partials/logos %>
 
 
 	<!-- FOOTER -->
-
-	<section class="footer">
-		<div class="constrainer">
-
-			<div class="footer-col col-xs-6 col-sm-3">
-				<img src="img/GSV-footer-logo.png">
-				<p>© 2016 GSV Transportation<br>
-				All rights reserved</p>
-			</div>
-			<div class="footer-col col-xs-6 col-sm-3">
-				<a href="">About</a><br>
-				<a href="">Management</a><br>
-				<a href="">Safety</a><br>
-				<a href="">Contact</a><br>
-				<a href="">Track Equipment</a>
-			</div>
-			<div class="footer-col col-xs-6 col-sm-3">
-				<a href="">Ship2Feed</a><br>
-				<a href="">Mc/W9/ins</a><br>
-				<a href="">Referrals</a><br>
-				<a href="">Carrier411</a><br>
-				<a href="">Track Equipment</a>
-			</div>
-			<div class="footer-col col-xs-6 col-sm-3">
-				<a href="">Google+</a><br>
-				<a href="">Facebook+</a><br>
-				<a href="">Twitter+</a>
-			</div>
-
-		</div>
-	</section>
-
-
-
-<!-- MODAL -->
-
-<div class="modal" id="demo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="constrainer">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 id="myModalLabel">Quote Modal </h4>
-        </div>
-        <p class="modal-body">
- 			Thanks for signing up. Someone from our GSV Success team will contact you shortly to get your demo started. Please check your email for confirmation.
-        </p>
-        <div class="modal-btn-container">
-			<button type="button" class="modal-btn" data-dismiss="modal">Thanks</a>
-		</div>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-
+	<% include ../partials/footer %>
 
 
 </body>

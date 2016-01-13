@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danajwright/gsv.git"
@@ -19,5 +20,13 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3"
+  },
+
+  "name": "node-ejs",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.6.1"
   }
+
 }
