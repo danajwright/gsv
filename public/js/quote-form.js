@@ -1,22 +1,14 @@
 $(document).ready(function() {
 
-  $('input#submitButton').click( function() {
-      $.post( 'some-url', $('form#myForm').serialize(), function(data) {
-           ... do something with response from server
-         },
-         'json'
-      );
-  });
-
-  $('input#submitButton').click( function() {
+  $('#submitButton').click( function() {
       $.ajax({
-          url: 'some-url',
+          url: '/email',
           type: 'post',
           dataType: 'json',
-          data: $('form#myForm').serialize(),
+          data: $('form#quoteForm').serialize(),
           success: function(data) {
-                     ... do something with the data...
-                   }
+          console.log(data)
+       }
       });
   });
 
