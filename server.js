@@ -12,14 +12,18 @@ var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
 
 app.post('/email', function(req, resp) {
   sendgrid.send({
-    to: 'danajwright@gmail.com'
-    from: 'website-quote'
+    to: 'danajwright@gmail.com',
+    from: 'website-quote',
     subject: 'Quote request from '+req.body.name,
-    text: 	req.body.name
-    		req.body.email
-			req.body.message
-    resp.send("email sent");
-  },
+    text: "bla"
+
+   //  req.body.name
+   //  		req.body.email
+			// req.body.message
+    
+  });
+resp.send("email sent");
+
 //   function(err, json) {
 //     if (err) { return console.error(err); }
 //     console.log(json);
