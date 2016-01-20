@@ -292,6 +292,31 @@
 	color: #7e14aa;
 }
 
+.footer-col-social a {
+	color: #b3b3b3;
+	font-size: 15.5px;
+	line-height: 27px;
+	color: #666;
+	font-family: 'Arial', sans-serif;
+
+  -webkit-transition: 150ms ease-in;
+  -moz-transition: 150ms ease-in;
+  -o-transition: 150ms ease-in;
+  transition: 150ms ease-in;
+}
+
+.footer-google:hover {
+	color: #D50F25;
+}
+
+.footer-facebook:hover {
+	color: #3b5998;
+}
+
+.footer-twitter:hover {
+	color: #00aced;
+}
+
 .footer-col img {
 	width: 43%;
 }
