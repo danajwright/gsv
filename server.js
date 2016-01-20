@@ -20,7 +20,6 @@ var port = process.env.PORT || 3000;
 //   resp.send("email sent")
 // });
 
-
 app.use(express.static(__dirname + "/public"));
 
 // set the view engine to ejs
