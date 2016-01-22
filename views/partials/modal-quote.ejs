@@ -7,17 +7,23 @@
           <h2 id="myModalLabel">Get a Quote</h2>
         </div>
 
-        <form class="quote-form-wrap clearfix" id="quoteForm" action="">
+        <form class="modal-form-wrap clearfix" id="quoteForm" action="">
 
-          <input type="text" name="phone" id="quote-phone" placeholder="Phone number">
+          <input type="text" name="quotelName" class="modal-field" id="quoteName" placeholder="Full name">
 
-          <input type="text" name="pickup-address" class="pull-left" id="quote-pickup-field" placeholder="Pickup address">
-          <input type="text" name="email" class="pull-right" id="quote-date-field" placeholder="Pickup date">
+          <input type="email" name="quoteEmail" class="modal-field-half pull-left" id="quoteEmail" placeholder="Email address">
+          
+          <input type="phone" name="quotePhone" class="modal-field-half pull-right" id="quotePhone" placeholder="Phone number">
 
-          <input type="text" name="pickup-address" class="pull-left" id="quote-delivery-field" placeholder="Delivery address">
-          <input type="text" name="email" class="pull-right" id="quote-delivery-date-field" placeholder="Delivery date">
+          <input type="text" name="quotePickupZip" class="modal-field-half pull-left" id="quotePickupZip" placeholder="Pickup ZIP">
 
-          <input type="text" name="email" class="pull-right" id="quote-cargo-value" placeholder="Cargo value (in dollars)">
+          <input type="text" name="quotePickupDate" class="modal-field-half pull-right" id="quotePickupDate" placeholder="Pickup date">
+
+          <input type="text" name="quoteDeliveryZip" class="modal-field-half pull-left" id="quoteDeliveryZip" placeholder="Delivery ZIP">
+
+          <input type="text" name="quoteDeliveryDate" class="modal-field-half pull-right" id="quoteDeliveryDate" placeholder="Delivery date">
+
+          <input type="text" name="quoteCargoValue" class="modal-field" id="quoteCargoValue" placeholder="Cargo value (in dollars)">
 
 
           <div class="modal-weight-btns">
@@ -34,7 +40,7 @@
           </div>
         
           <div class="modal-btn-container clearfix">
-  			     <button type="button" class="modal-btn pull-right" id="submitButton" data-dismiss="modal">SUBMIT</button>
+  			     <button type="submit" class="modal-btn pull-right" id="quote-button" data-dismiss="modal">SUBMIT</button>
              <a class="modal-cancel pull-left" data-dismiss="modal" aria-label="Close">Cancel</a>
   		    </div>
 

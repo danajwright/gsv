@@ -30,7 +30,7 @@
 
 /*----------------- FORM SECTION -------------------*/
 
-.quote-form-wrap {
+.modal-form-wrap {
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -39,24 +39,7 @@
   font-family: 'AvenirPro', sans-serif;
 }
 
-#quote-pickup-field {
-  margin-top: 20px;
-  width: 100%;
-  height: 46px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  padding-left: 10px;
-  background-color: #fff;
-  border: 0px;
-  outline: 1px solid #ebebeb;
-  color: #919191;
-}
-
-#quote-pickup-field:focus {
-  outline: 1px solid #7e14aa;
-}
-
-#quote-date-field {
+.modal-field {
   margin-top: 20px;
   width: 100%;
   height: 46px;
@@ -69,28 +52,11 @@
   color: #919191;
 }
 
-#quote-date-field:focus {
+#modal-field:focus {
   outline: 1px solid #7e14aa;
 }
 
-#quote-delivery-field {
-  margin-top: 20px;
-  width: 100%;
-  height: 46px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  padding-left: 10px;
-  background-color: #fff;
-  border: 0px;
-  outline: 1px solid #ebebeb;
-  color: #919191;
-}
-
-#quote-delivery-field:focus {
-  outline: 1px solid #7e14aa;
-}
-
-#quote-delivery-date-field {
+.modal-field-half {
   margin-top: 20px;
   width: 100%;
   height: 46px;
@@ -103,83 +69,9 @@
   color: #919191;
 }
 
-#quote-delivery-date-field:focus {
+#modal-field-half:focus {
   outline: 1px solid #7e14aa;
 }
-
-#quote-cargo-value {
-  margin-top: 20px;
-  width: 100%;
-  height: 46px;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  padding-left: 10px;
-  background-color: #fff;
-  border: 0px;
-  outline: 1px solid #ebebeb;
-  color: #919191;
-  margin-bottom: 30px;
-}
-
-#quote-cargo-value:focus {
-  outline: 1px solid #7e14aa;
-}
-
-#quote-phone {
-  margin-top: 20px;
-  width: 100%;
-  height: 46px;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  padding-left: 10px;
-  background-color: #fff;
-  border: 0px;
-  outline: 1px solid #ebebeb;
-  color: #919191;
-}
-
-#quote-phone:focus {
-  outline: 1px solid #7e14aa;
-}
-
-
-.modal-btn-container {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  overflow: hidden;
-}
-
-.modal-btn {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: inline-block;
-  background-color: #7e14aa;
-  border: 1px solid #7e14aa;
-  border-radius: 3px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 48%;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-}
-
-.modal-cancel {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  color: #7e14aa;
-  width: 48%;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-}
-
-.modal-cancel:hover {
-  color: #7e14aa; 
-}
-
 
 
 /*--- WEIGHT BUTTONS ---*/
@@ -237,6 +129,46 @@
 }
 
 
+/*----------------- MODAL BUTTONS -------------------*/
+
+.modal-btn-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  overflow: hidden;
+}
+
+.modal-btn {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: inline-block;
+  background-color: #7e14aa;
+  border: 1px solid #7e14aa;
+  border-radius: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 48%;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.modal-cancel {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  color: #7e14aa;
+  width: 48%;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.modal-cancel:hover {
+  color: #7e14aa; 
+}
+
+
 @media (min-width: 480px) {
 
 }
@@ -255,19 +187,7 @@
 
 /*-- FORM SECTION ---*/
 
-#quote-pickup-field {
-  width: 48%;
-}
-
-#quote-date-field {
-  width: 48%;
-}
-
-#quote-delivery-field {
-  width: 48%;
-}
-
-#quote-delivery-date-field {
+.modal-field-half {
   width: 48%;
 }
 
