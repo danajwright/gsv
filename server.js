@@ -7,7 +7,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(bodyParser.json());
 
-var SENDGRID_API_KEY = ""
+//check if the server is on Heroku, if not, we're on local - include credentials file
+if (process.env.SENDGRID_API_KEY === undefined) {
+  var credentials = require('./credentials');
+  var SENDGRID_API_KEY = credentials.sendgrid.api_key;
+}
+else { //if on Heroku, set environment variable to the heroku environment variable
+  var SENDGRID_API_KEY  =  process.env.SENDGRID_API_KEY;
+}
 
 var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
 
@@ -15,23 +22,27 @@ app.post('/email', function(req, resp) {
 	sendgrid.send({
 	  to: 'danajwright@gmail.com',
 	  from: 'website-quote',
-	  subject: 'Quote request from '+req.body.name,
+	  subject: 'Quote request from '+req.body.fullName,
 	  html: '<b>full name:</b> ' + req.body.fullName +
 	  		'<br><br><b>phone:</b> ' + req.body.phone +
 	  		'<br><br><b>email:</b> ' + req.body.email +
 	  		'<br><br><b>pickup zip:</b> ' + req.body.pickupZip +
 	  		'<br><br><b>pickup date:</b> ' + req.body.pickupDate +
-	  		'<br><br><b>deliver zip:</b> ' + req.body.deliverZip +
-	  		'<br><br><b>deliver date:</b> ' + req.body.deliverDate +
+	  		'<br><br><b>delivery zip:</b> ' + req.body.deliverZip +
+	  		'<br><br><b>delivery date:</b> ' + req.body.deliverDate +
 	  		'<br><br><b>cargo value:</b> ' + req.body.cargoValue +
 	  		'<br><br><b>cargo weight:</b> ' + req.body.cargoWeight
-	});
+	  },
 
-  console.log(req.body.test)
-  console.log(req.body.phone)
+    function(err, json) {
+      if (err) { return console.error(err); }
+    console.log(json);
+    });
 
-  resp.write(JSON.stringify({blah:"blah response"}));
-  resp.end();
+    console.log("in email post");
+
+    resp.write(JSON.stringify({blah:"blah response"}));
+    resp.end();
 });
 
 

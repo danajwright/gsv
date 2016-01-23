@@ -7,44 +7,48 @@
           <h2 id="myModalLabel">Get a Quote</h2>
         </div>
 
-        <form class="modal-form-wrap clearfix" id="quoteForm" action="">
+        <form class="modal-form-wrap clearfix" id="quoteForm">
 
-          <input type="text" name="quotelName" class="modal-field" id="quoteName" placeholder="Full name">
+          <input type="text" name="quotelName" class="modal-field" id="quoteName" placeholder="Full name" required>
 
-          <input type="email" name="quoteEmail" class="modal-field-half pull-left" id="quoteEmail" placeholder="Email address">
+          <input type="email" name="quoteEmail" class="modal-field-half pull-left" id="quoteEmail" placeholder="Email address" required>
           
-          <input type="phone" name="quotePhone" class="modal-field-half pull-right" id="quotePhone" placeholder="Phone number">
+          <input type="phone" name="quotePhone" class="modal-field-half pull-right" id="quotePhone" placeholder="Phone number" required>
 
-          <input type="text" name="quotePickupZip" class="modal-field-half pull-left" id="quotePickupZip" placeholder="Pickup ZIP">
+          <input type="text" name="quotePickupZip" class="modal-field-half pull-left" id="quotePickupZip" placeholder="Pickup ZIP" required>
 
-          <input type="text" name="quotePickupDate" class="modal-field-half pull-right" id="quotePickupDate" placeholder="Pickup date">
+          <input type="text" name="quotePickupDate" class="modal-field-half pull-right" id="quotePickupDate" placeholder="Pickup date" required>
 
-          <input type="text" name="quoteDeliveryZip" class="modal-field-half pull-left" id="quoteDeliveryZip" placeholder="Delivery ZIP">
+          <input type="text" name="quoteDeliverZip" class="modal-field-half pull-left" id="quoteDeliverZip" placeholder="Delivery ZIP" required>
 
-          <input type="text" name="quoteDeliveryDate" class="modal-field-half pull-right" id="quoteDeliveryDate" placeholder="Delivery date">
+          <input type="text" name="quoteDeliverDate" class="modal-field-half pull-right" id="quoteDeliverDate" placeholder="Delivery date" required>
 
-          <input type="text" name="quoteCargoValue" class="modal-field" id="quoteCargoValue" placeholder="Cargo value (in dollars)">
+          <input type="text" name="quoteCargoValue" class="modal-field" id="quoteCargoValue" placeholder="Cargo value (in dollars)" required>
 
 
           <div class="modal-weight-btns">
             <p class="cargo-weight-txt">Approximate cargo weight in lbs:</p>
               <label class="selectme">
-                <input class="weightCheckbox" type="checkbox" value="0-500"><span>0 - 500 lbs</span>
+                <input class="weightCheckbox" id="cargoWeight" type="checkbox" value="0-500"><span>0 - 500 lbs</span>
               </label>
               <label class="selectme">
-                <input class="weightCheckbox" type="checkbox" value="500-1000"><span>500 - 1000 lbs</span>
+                <input class="weightCheckbox" id="cargoWeight" type="checkbox" value="500-1000"><span>500 - 1000 lbs</span>
               </label>
               <label class="selectme">
-                <input class="weightCheckbox" type="checkbox" value="1000+"><span>1000 lbs+</span>
+                <input class="weightCheckbox" id="cargoWeight" type="checkbox" value="1000+"><span>1000 lbs+</span>
               </label>
           </div>
         
           <div class="modal-btn-container clearfix">
-  			     <button type="submit" class="modal-btn pull-right" id="quote-button" data-dismiss="modal">SUBMIT</button>
+  			     <button type="submit" class="modal-btn pull-right" id="quote-button">SUBMIT</button>
              <a class="modal-cancel pull-left" data-dismiss="modal" aria-label="Close">Cancel</a>
   		    </div>
 
         </form>
+
+        <div class="form-submit-confirmation">
+          Couverture photographique de mariages, naissances et autres événements. Photographie en studio de portraits, de maternité, de famille et de couple de type Mode ou Boudoir ou encore d'entreprise. Design Graphique et branding pour particulier et entreprises
+        </div>
         
       </div>
     </div>

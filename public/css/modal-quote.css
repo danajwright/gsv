@@ -52,7 +52,7 @@
   color: #919191;
 }
 
-#modal-field:focus {
+.modal-field:focus {
   outline: 1px solid #7e14aa;
 }
 
@@ -69,7 +69,7 @@
   color: #919191;
 }
 
-#modal-field-half:focus {
+.modal-field-half:focus {
   outline: 1px solid #7e14aa;
 }
 
@@ -128,6 +128,17 @@
   color: #fff;
 }
 
+
+/*----------------- ERRORS -------------------*/
+
+#quoteForm div.error {
+  color: #FB3A3A;
+  padding: 0;
+}
+
+.error-message-right {
+  text-align: right;
+}
 
 /*----------------- MODAL BUTTONS -------------------*/
 
