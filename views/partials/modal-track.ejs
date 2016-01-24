@@ -5,23 +5,40 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 id="myModalLabel">Track a Shipment</h2>
+          <h2 id="track-header-success" class="track-success-header-hide">Success!</h2>
         </div>
 
-        <form class="modal-form-wrap clearfix" id="trackForm" action="">
+        <form class="track-form-wrap clearfix" id="trackForm">
 
-          <input type="text" name="trackName" class="modal-field" id="trackName" placeholder="Full name">
+          <input type="text" name="trackName" class="modal-field" id="trackName" placeholder="Full name" require>
 
-          <input type="text" name="trackEmailAddress" class="modal-field" id="trackEmailAddress" placeholder="Email address">
-          <input type="text" name="trackNumber" class="modal-field" id="trackNumber" placeholder="Tracking number">
+          <input type="email" name="trackEmailAddress" class="modal-field-half pull-left" id="trackEmailAddress" placeholder="Email address" require>
 
-          <textarea name="track-issue" class="track-textarea" placeholder="Please describe any issues you may be having with your shipment."></textarea>
+          <input type="phone" name="trackPhone" class="modal-field-half pull-right" id="trackPhone" placeholder="Phone number" require>
+
+          <input type="text" name="trackNumber" class="modal-field" id="trackNumber" placeholder="Tracking number" require>
+
+          <textarea name="trackIssue" class="track-textarea" placeholder="Please describe any issues you may be having with your shipment."></textarea>
         
           <div class="modal-btn-container clearfix">
-  			     <input type="button" class="modal-btn pull-right" id="submitButton" data-dismiss="modal">SUBMIT</button>
+  			     <button type="submit" class="modal-btn pull-right" id="track-button">SUBMIT</button>
              <a class="modal-cancel pull-left" data-dismiss="modal" aria-label="Close">Cancel</a>
   		    </div>
 
         </form>
+
+        <div class="track-submit-confirm-hide" id="track-submit-confirm-id">
+          <div class="check-animation">
+            <svg x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+              <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
+              C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+            </svg>
+          </div>
+          <p class="success-txt">
+            Your request was submitted, a representative will be in touch with you shortly.
+          </p>
+          <a class="modal-success-okay" data-dismiss="modal" aria-label="Close">Sounds Good!</a>
+        </div>
         
       </div>
     </div>

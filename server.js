@@ -18,20 +18,21 @@ else { //if on Heroku, set environment variable to the heroku environment variab
 
 var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
 
-app.post('/email', function(req, resp) {
+//post from quote modal
+app.post('/quote-email', function(req, resp) {
 	sendgrid.send({
 	  to: 'danajwright@gmail.com',
 	  from: 'website-quote',
 	  subject: 'Quote request from '+req.body.fullName,
-	  html: '<b>full name:</b> ' + req.body.fullName +
-	  		'<br><br><b>phone:</b> ' + req.body.phone +
-	  		'<br><br><b>email:</b> ' + req.body.email +
-	  		'<br><br><b>pickup zip:</b> ' + req.body.pickupZip +
-	  		'<br><br><b>pickup date:</b> ' + req.body.pickupDate +
-	  		'<br><br><b>delivery zip:</b> ' + req.body.deliverZip +
-	  		'<br><br><b>delivery date:</b> ' + req.body.deliverDate +
-	  		'<br><br><b>cargo value:</b> ' + req.body.cargoValue +
-	  		'<br><br><b>cargo weight:</b> ' + req.body.cargoWeight
+	  html: '<b>Full name:</b> ' + req.body.fullName +
+	  		'<br><br><b>Phone:</b> ' + req.body.phone +
+	  		'<br><br><b>Email:</b> ' + req.body.email +
+	  		'<br><br><b>Pickup ZIP:</b> ' + req.body.pickupZip +
+	  		'<br><br><b>Pickup date:</b> ' + req.body.pickupDate +
+	  		'<br><br><b>Delivery ZIP:</b> ' + req.body.deliverZip +
+	  		'<br><br><b>Delivery date:</b> ' + req.body.deliverDate +
+	  		'<br><br><b>Cargo value:</b> ' + req.body.cargoValue +
+	  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight
 	  },
 
     function(err, json) {
@@ -44,6 +45,33 @@ app.post('/email', function(req, resp) {
     resp.write(JSON.stringify({blah:"blah response"}));
     resp.end();
 });
+
+// post from track modal
+app.post('/track-email', function(req, resp) {
+	sendgrid.send({
+	  to: 'danajwright@gmail.com',
+	  from: 'website-track',
+	  subject: 'Track request from '+req.body.trackName,
+	  html: '<b>Full name:</b> ' + req.body.trackName +
+	  		'<br><br><b>Phone:</b> ' + req.body.trackPhone +
+	  		'<br><br><b>Email:</b> ' + req.body.trackEmail +
+	  		'<br><br><b>Issue:</b> ' + req.body.trackIssue
+	  },
+
+    function(err, json) {
+      if (err) { return console.error(err); }
+    console.log(json);
+    });
+
+    console.log("in email post");
+
+    resp.write(JSON.stringify({blah:"blah response"}));
+    resp.end();
+});
+
+
+
+
 
 
 app.use(express.static(__dirname + "/public"));

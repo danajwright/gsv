@@ -30,12 +30,11 @@
 
 /*----------------- FORM SECTION -------------------*/
 
-.modal-form-wrap {
+.modal-form-wrap, .track-form-wrap, .feedback-form-wrap {
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  display: block;
   font-family: 'AvenirPro', sans-serif;
 }
 
@@ -129,16 +128,6 @@
 }
 
 
-/*----------------- ERRORS -------------------*/
-
-#quoteForm div.error {
-  color: #FB3A3A;
-  padding: 0;
-}
-
-.error-message-right {
-  text-align: right;
-}
 
 /*----------------- MODAL BUTTONS -------------------*/
 
@@ -156,18 +145,22 @@
   background-color: #7e14aa;
   border: 1px solid #7e14aa;
   border-radius: 3px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 48%;
-  color: #fff;
+  color: #d8d7d7;
   font-family: 'Arial', sans-serif;
+}
+
+.modal-btn:hover {
+  color: #fff;
 }
 
 .modal-cancel {
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: block;
   color: #7e14aa;
   width: 48%;
@@ -177,6 +170,122 @@
 
 .modal-cancel:hover {
   color: #7e14aa; 
+}
+
+
+/*----------------- QUOTE SUBMIT CONFIRMATION -------------------*/
+
+.modal-form-wrap-hide {
+  display: none;
+}
+
+.form-submit-confirm-hide {
+  display: none;
+}
+
+.form-submit-confirm-show {
+  display: block;
+}
+
+.modal-header-hide {
+  display: none;
+}
+
+.success-header-hide {
+  display: none;
+}
+
+.modal-header-success-show {
+  display: block;
+}
+
+
+/*----------------- TRACK SUBMIT CONFIRMATION -------------------*/
+
+.track-form-wrap-hide {
+  display: none;
+}
+
+.track-submit-confirm-hide {
+  display: none;
+}
+
+.form-submit-confirm-show {
+  display: block;
+}
+
+.track-header-hide {
+  display: none;
+}
+
+.track-success-header-hide {
+  display: none;
+}
+
+.track-header-success-show {
+  display: block;
+}
+
+
+/*---- ANIMATED CHECK ----*/
+
+.check-animation {
+  width: 100px;
+  margin: 60px auto 0;
+}
+.checkmark {
+  stroke: green;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.success-txt {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 24px;
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.modal-success-okay {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  outline: 1px solid #7e14aa;
+  color: #d8d7d7;
+  font-size: 16px;
+  background-color: #7e14aa;
+  cursor: pointer;
+  -webkit-transition: 150ms ease-in;
+  -moz-transition: 150ms ease-in;
+  -o-transition: 150ms ease-in;
+  transition: 150ms ease-in;
+}
+
+.modal-success-okay:hover {
+  color: #fff;
+  outline: 1px solid #7e14aa;
+
 }
 
 

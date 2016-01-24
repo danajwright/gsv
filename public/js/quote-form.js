@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
-  $('#quoteForm').on( "submit", function(event) {
+  $('#quoteForm').on("submit", function(event) {
 
     event.preventDefault();
-    console.log('submit button clicked')
 
     var sampleData = {
       fullName: $("#quoteName").val(),
@@ -18,16 +17,18 @@ $(document).ready(function() {
     }
 
     $.ajax({
-      url: '/email',
+      url: '/quote-email',
       type: 'post',
       dataType: 'json',
       
       data: sampleData,
       success: function(data) {
         console.log(data);
+        $("#quoteForm").removeClass("modal-form-wrap").addClass("modal-form-wrap-hide");
+        $("#form-submit-confirm-id").removeClass("form-submit-confirm-hide").addClass("form-submit-confirm-show");
+        $("#modal-header").addClass("modal-header-hide");
+        $("#modal-header-success").addClass("modal-header-success-show");
       }
     });
   });
-
-
 });
