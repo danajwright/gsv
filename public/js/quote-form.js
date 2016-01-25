@@ -12,8 +12,8 @@ $(document).ready(function() {
       pickupDate: $("#quotePickupDate").val(),
       deliverZip: $("#quoteDeliverZip").val(),
       deliverDate: $("#quoteDeliverDate").val(),
-      cargoValue: $("#quoteCargoValue").val(),
-      cargoWeight: $("#cargoWeight:checked").val(),
+      cargoDims: $("#quoteCargoDims").val(),
+      cargoWeight: $("#quoteCargoWeight:checked").val(),
     }
 
     $.ajax({

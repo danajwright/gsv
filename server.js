@@ -31,7 +31,7 @@ app.post('/quote-email', function(req, resp) {
 	  		'<br><br><b>Pickup date:</b> ' + req.body.pickupDate +
 	  		'<br><br><b>Delivery ZIP:</b> ' + req.body.deliverZip +
 	  		'<br><br><b>Delivery date:</b> ' + req.body.deliverDate +
-	  		'<br><br><b>Cargo value:</b> ' + req.body.cargoValue +
+	  		'<br><br><b>Cargo Dimentions:</b> ' + req.body.cargoDims +
 	  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight
 	  },
 
