@@ -63,8 +63,6 @@ app.post('/track-email', function(req, resp) {
     console.log(json);
     });
 
-    console.log("in email post");
-
     resp.write(JSON.stringify({blah:"blah response"}));
     resp.end();
 });
