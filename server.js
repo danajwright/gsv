@@ -68,6 +68,27 @@ app.post('/track-email', function(req, resp) {
 });
 
 
+// post from feedback modal
+app.post('/feedback-email', function(req, resp) {
+	sendgrid.send({
+	  to: 'danajwright@gmail.com',
+	  from: 'website-feedback',
+	  subject: 'Feedback request from '+req.body.feedbackName,
+	  html: '<b>Full name:</b> ' + req.body.feedbackName +
+	  		'<br><br><b>Phone:</b> ' + req.body.feedbackPhone +
+	  		'<br><br><b>Email:</b> ' + req.body.feedbackEmail +
+	  		'<br><br><b>Issue:</b> ' + req.body.feedbackIssue
+	  },
+
+    function(err, json) {
+      if (err) { return console.error(err); }
+    console.log(json);
+    });
+
+    resp.write(JSON.stringify({blah:"blah response"}));
+    resp.end();
+});
+
 
 
 

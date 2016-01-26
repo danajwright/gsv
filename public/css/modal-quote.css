@@ -226,6 +226,31 @@
   display: block;
 }
 
+/*----------------- FEEDBACK SUBMIT CONFIRMATION -------------------*/
+
+.feedback-form-wrap-hide {
+  display: none;
+}
+
+.feedback-submit-confirm-hide {
+  display: none;
+}
+
+.form-submit-confirm-show {
+  display: block;
+}
+
+.feedback-header-hide {
+  display: none;
+}
+
+.feedback-success-header-hide {
+  display: none;
+}
+
+.feedback-header-success-show {
+  display: block;
+}
 
 /*---- ANIMATED CHECK ----*/
 
