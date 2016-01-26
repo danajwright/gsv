@@ -172,16 +172,17 @@
 	display: inline-block;
 	background-color: #e7973e;
 	padding-top: 18px;
-	padding-bottom: 18px;
+	padding-bottom: 15px;
 	width: 80%;
 	color: #d8d7d7;
 	text-transform: uppercase;
+	border-bottom: 6px solid #9d6628;
 }
 
 .search-btn:hover {
   color: #fff;
   cursor: pointer;
-  text-decoration: none
+  text-decoration: none;
 }
 
 
@@ -317,7 +318,7 @@
 
 .search-btn {
 	padding-top: 21px;
-	padding-bottom: 21px;
+	padding-bottom: 15px;
 	width: 80%;
 }
 
@@ -327,7 +328,7 @@
 
 .search-btn {
 	padding-top: 21px;
-	padding-bottom: 21px;
+	padding-bottom: 15px;
 	width: 40%;
 }
 
