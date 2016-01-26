@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
+  console.log('yo')
+
   $('#trackForm').on("submit", function(event) {
 
-    console.log('button clicked');
-
     event.preventDefault();
+
+    console.log('button clicked');
 
     var sampleData = {
       trackName: $("#trackName").val(),

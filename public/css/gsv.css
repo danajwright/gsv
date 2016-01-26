@@ -112,7 +112,7 @@
 
 
 .CoverImage {
-  background: url(../img/logistics-dark.jpg) no-repeat center center;
+  background: url(../img/logistics-prp1.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -176,7 +176,7 @@
 	width: 80%;
 	color: #d8d7d7;
 	text-transform: uppercase;
-	border-bottom: 6px solid #9d6628;
+	border-bottom: 5px solid #9d6628;
 }
 
 .search-btn:hover {
