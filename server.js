@@ -7,13 +7,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(bodyParser.json());
 
+
+console.log('api-key', process.env.SENDGRID_API_KEY)
+
 //check if the server is on Heroku, if not, we're on local - include credentials file
 if (process.env.SENDGRID_API_KEY === undefined) {
-  var credentials = require('./credentials');
+  var credentials = require('./credential');
   var SENDGRID_API_KEY = credentials.sendgrid.api_key;
 }
 else { //if on Heroku, set environment variable to the heroku environment variable
   var SENDGRID_API_KEY  =  process.env.SENDGRID_API_KEY;
+
 }
 
 var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
