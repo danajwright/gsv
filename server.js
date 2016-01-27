@@ -17,11 +17,11 @@ if (process.env.SENDGRID_API_KEY === undefined) {
 }
 else { //if on Heroku, set environment variable to the heroku environment variable
   var SENDGRID_API_KEY  =  process.env.SENDGRID_API_KEY;
-
 }
 
 var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
 
+console.log("sendgrid", sendgrid);
 //post from quote modal
 app.post('/quote-email', function(req, resp) {
 	sendgrid.send({
@@ -29,25 +29,17 @@ app.post('/quote-email', function(req, resp) {
 	  from: 'website-quote',
 	  subject: 'Quote request from '+req.body.fullName,
 	  html: '<b>Full name:</b> ' + req.body.fullName +
-	  		'<br><br><b>Phone:</b> ' + req.body.phone +
-	  		'<br><br><b>Email:</b> ' + req.body.email +
-	  		'<br><br><b>Pickup ZIP:</b> ' + req.body.pickupZip +
-	  		'<br><br><b>Pickup date:</b> ' + req.body.pickupDate +
-	  		'<br><br><b>Delivery ZIP:</b> ' + req.body.deliverZip +
-	  		'<br><br><b>Delivery date:</b> ' + req.body.deliverDate +
-	  		'<br><br><b>Cargo Dimentions:</b> ' + req.body.cargoDims +
-	  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight
-	  },
-
-    function(err, json) {
-      if (err) { return console.error(err); }
-    console.log(json);
-    });
-
-    console.log("in email post");
-
-    resp.write(JSON.stringify({blah:"blah response"}));
-    resp.end();
+  		'<br><br><b>Phone:</b> ' + req.body.phone +
+  		'<br><br><b>Email:</b> ' + req.body.email +
+  		'<br><br><b>Pickup ZIP:</b> ' + req.body.pickupZip +
+  		'<br><br><b>Pickup date:</b> ' + req.body.pickupDate +
+  		'<br><br><b>Delivery ZIP:</b> ' + req.body.deliverZip +
+  		'<br><br><b>Delivery date:</b> ' + req.body.deliverDate +
+  		'<br><br><b>Cargo Dimentions:</b> ' + req.body.cargoDims +
+  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight
+  });
+  resp.write(JSON.stringify({blah:"blah response"}));
+  resp.end();
 });
 
 // post from track modal
@@ -60,15 +52,16 @@ app.post('/track-email', function(req, resp) {
 	  		'<br><br><b>Phone:</b> ' + req.body.trackPhone +
 	  		'<br><br><b>Email:</b> ' + req.body.trackEmail +
 	  		'<br><br><b>Issue:</b> ' + req.body.trackIssue
-	  },
+  	}, function(err, json) {
+      if (err) {
+        return console.log(err); 
+      }
+    }
+  );
 
-    function(err, json) {
-      if (err) { return console.error(err); }
-    console.log(json);
-    });
-
-    resp.write(JSON.stringify({blah:"blah response"}));
-    resp.end();
+  console.log("in the track email");
+  resp.write(JSON.stringify({blah:"blah response"}));
+  resp.end();
 });
 
 
@@ -82,15 +75,10 @@ app.post('/feedback-email', function(req, resp) {
 	  		'<br><br><b>Phone:</b> ' + req.body.feedbackPhone +
 	  		'<br><br><b>Email:</b> ' + req.body.feedbackEmail +
 	  		'<br><br><b>Issue:</b> ' + req.body.feedbackIssue
-	  },
+	 });
 
-    function(err, json) {
-      if (err) { return console.error(err); }
-    console.log(json);
-    });
-
-    resp.write(JSON.stringify({blah:"blah response"}));
-    resp.end();
+  resp.write(JSON.stringify({blah:"blah response"}));
+  resp.end();
 });
 
 
