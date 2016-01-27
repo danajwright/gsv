@@ -4,12 +4,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 id="track-header">Track a Shipment</h2>
+          <h2 id="track-header">Track/ POD</h2>
           <h2 id="track-header-success" class="track-success-header-hide">Success!</h2>
         </div>
 
         <form class="track-form-wrap clearfix" id="trackForm">
-
           <input type="text" name="trackName" class="modal-field" id="trackName" placeholder="Full name" required>
 
           <input type="email" name="trackEmail" class="modal-field-half pull-left" id="trackEmail" placeholder="Email address" required>
@@ -18,13 +17,12 @@
 
           <input type="text" name="trackNumber" class="modal-field" id="trackNumber" placeholder="Tracking number" required>
 
-          <textarea name="trackIssue" class="track-textarea" id="trackIssue" placeholder="Please describe any issues you may be having with your shipment."></textarea>
+          <textarea name="trackIssue" class="track-textarea" id="trackIssue" placeholder="Please indicate if this is a Proof of Delivery request or another issue with your shipment."></textarea>
         
           <div class="modal-btn-container clearfix">
   			     <button type="submit" class="modal-btn pull-right" id="track-button">SUBMIT</button>
              <a class="modal-cancel pull-left" data-dismiss="modal" aria-label="Close">Cancel</a>
   		    </div>
-
         </form>
 
         <div class="track-submit-confirm-hide" id="track-submit-confirm-id">
