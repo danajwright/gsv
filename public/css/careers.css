@@ -88,7 +88,15 @@
     line-height: 36px;
 }
 
-.careers-txt span {
+.jobs-email {
+	color: #7E14AA;
+}
+
+.jobs-email:hover {
+	color: #7E14AA;
+}
+
+.jobs-email:focus {
 	color: #7E14AA;
 }
 
