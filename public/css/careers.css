@@ -1,11 +1,83 @@
 
 
+
 .careers-txt-header {
 	margin-top: 90px;
+	margin-bottom: 40px;
 	font-size: 27px;
     color: #666;
     font-weight: 500;
     line-height: 36px;
+}
+
+.careers-about {
+	margin-top: 30px;
+	font-size: 24px;
+	line-height: 43px;
+}
+
+.careers-jobs {
+	margin-top: 0px;
+	padding-left: 0px;
+	background-color: #ebebeb;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.careers-jobs li {
+	list-style-type: none;
+}
+
+.job-title {
+	margin-top: 0px;
+	display: inline-block;
+}
+
+.job-button {
+	display: block;
+	color: #7E14AA;
+}
+
+.job-button h3 {
+	color: #7E14AA;
+	margin-bottom: 0px;
+}
+
+#plus {
+	display: inline-block;
+	color: #7E14AA;
+	margin-bottom: 0px;
+	font-size: 30px;
+}
+
+.job-button:hover {
+	color: #7E14AA;
+}
+
+.job-button:focus {
+	color: #7E14AA;
+}
+
+.job-details {
+	display: none;
+}
+
+.job-summary {
+	margin-top: 10px;
+}
+
+.careers-jobs p, .job-requirements li {
+	color: #b3b3b3;
+	font-size: 15.5px;
+	line-height: 27px;
+	color: #666;
+	font-family: 'Arial', sans-serif;
+}
+
+.job-requirements li {
+	list-style-type: disc;
 }
 
 .careers-txt {
@@ -21,7 +93,7 @@
 }
 
 .careers-ul {
-	margin-top: 30px;
+	margin-top: 40px;
  	font-family: 'AvenirPro', sans-serif;  
     font-weight: 500;
 	font-size: 27px;
@@ -33,7 +105,9 @@
 }
 
 .careers-ul li {
-	margin-top: 20px;
+	margin-top: 30px;
+	font-size: 24px;
+	line-height: 43px;
 }
 
 .careers-ul li i {
@@ -49,7 +123,7 @@
 }
 
 .apply-btn {
-	margin-top: 40px;
+	margin-top: 60px;
 	font-weight: 600;
 	font-size: 18px;
 	letter-spacing: 1.1px;
