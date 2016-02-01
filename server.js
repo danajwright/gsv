@@ -69,7 +69,7 @@ app.post('/track-email', function(req, resp) {
 // post from pod modal
 app.post('/pod-email', function(req, resp) {
   sendgrid.send({
-    to: 'danajwright@gmail.com',
+    to: 'loadcon@gsvtransportation.com',
     from: 'website-track',
     subject: 'POD request from '+req.body.podName,
     html: '<b>Full name:</b> ' + req.body.podName +
@@ -94,7 +94,7 @@ app.post('/pod-email', function(req, resp) {
 // post from feedback modal
 app.post('/feedback-email', function(req, resp) {
 	sendgrid.send({
-	  to: 'danajwright@gmail.com',
+	  to: 'loadcon@gsvtransportation.com',
 	  from: 'website-feedback',
 	  subject: 'Feedback request from '+req.body.feedbackName,
 	  html: '<b>Full name:</b> ' + req.body.feedbackName +
