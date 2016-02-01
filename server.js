@@ -25,7 +25,7 @@ console.log("sendgrid", sendgrid);
 //post from quote modal
 app.post('/quote-email', function(req, resp) {
 	sendgrid.send({
-	  to: 'danajwright@gmail.com',
+	  to: 'loadcon@gsvtransportation.com',
 	  from: 'website-quote',
 	  subject: 'Quote request from '+req.body.fullName,
 	  html: '<b>Full name:</b> ' + req.body.fullName +
@@ -45,7 +45,7 @@ app.post('/quote-email', function(req, resp) {
 // post from track modal
 app.post('/track-email', function(req, resp) {
 	sendgrid.send({
-	  to: 'danajwright@gmail.com',
+	  to: 'loadcon@gsvtransportation.com',
 	  from: 'website-track',
 	  subject: 'Track request from '+req.body.trackName,
 	  html: '<b>Full name:</b> ' + req.body.trackName +
@@ -63,6 +63,32 @@ app.post('/track-email', function(req, resp) {
   resp.write(JSON.stringify({blah:"blah response"}));
   resp.end();
 });
+
+
+
+// post from pod modal
+app.post('/pod-email', function(req, resp) {
+  sendgrid.send({
+    to: 'danajwright@gmail.com',
+    from: 'website-track',
+    subject: 'POD request from '+req.body.podName,
+    html: '<b>Full name:</b> ' + req.body.podName +
+        '<br><br><b>Phone:</b> ' + req.body.podPhone +
+        '<br><br><b>Email:</b> ' + req.body.podEmail +
+        '<br><br><b>Tracking number:</b> ' + req.body.podNumber +
+        '<br><br><b>Hot or not:</b> ' + req.body.podHot +
+        '<br><br><b>Issue:</b> ' + req.body.podIssue
+    }, function(err, json) {
+      if (err) {
+        return console.log(err); 
+      }
+    }
+  );
+
+  resp.write(JSON.stringify({blah:"blah response"}));
+  resp.end();
+});
+
 
 
 // post from feedback modal
