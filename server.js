@@ -109,8 +109,6 @@ app.post('/feedback-email', function(req, resp) {
 
 
 
-
-
 app.use(express.static(__dirname + "/public"));
 
 // set the view engine to ejs
@@ -148,6 +146,20 @@ app.get('/contact', function(req, res) {
     res.render('pages/contact');
 });
 
+// documents page
+app.get('/docs', function(req, res) {
+    res.render('pages/docs');
+});
+
 app.listen(port);
 console.log('Server listening on ' + port);
+
+
+// file downloads on documents page
+
+app.get('/downloads', function(req, res) {
+  var gsvAuthority = __dirname + '/gsv-authority.pdf';
+  res.download(gsvAuthority); // Set disposition and send it.
+});
+
 
