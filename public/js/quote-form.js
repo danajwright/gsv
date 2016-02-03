@@ -12,8 +12,9 @@ $(document).ready(function() {
       pickupDate: $("#quotePickupDate").val(),
       deliverZip: $("#quoteDeliverZip").val(),
       deliverDate: $("#quoteDeliverDate").val(),
+      cargoVal: $("#quoteCargoVal").val(),
+      cargoWeight: $("#quoteCargoWeight").val(),
       cargoDims: $("#quoteCargoDims").val(),
-      cargoWeight: $("#quoteCargoWeight:checked").val(),
     }
 
     $.ajax({
@@ -30,5 +31,13 @@ $(document).ready(function() {
         $("#modal-header-success").addClass("modal-header-success-show");
       }
     });
+
   });
+
+
 });
+
+
+// $('#quoteModalThanks').on('click', function) {
+//   location.reload();
+// }

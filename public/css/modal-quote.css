@@ -133,6 +133,7 @@
   margin-right: auto;
   display: block;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .modal-btn {

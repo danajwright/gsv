@@ -22,6 +22,7 @@ else { //if on Heroku, set environment variable to the heroku environment variab
 var sendgrid = require('sendgrid')(SENDGRID_API_KEY);
 
 console.log("sendgrid", sendgrid);
+
 //post from quote modal
 app.post('/quote-email', function(req, resp) {
 	sendgrid.send({
@@ -35,8 +36,9 @@ app.post('/quote-email', function(req, resp) {
   		'<br><br><b>Pickup date:</b> ' + req.body.pickupDate +
   		'<br><br><b>Delivery ZIP:</b> ' + req.body.deliverZip +
   		'<br><br><b>Delivery date:</b> ' + req.body.deliverDate +
-  		'<br><br><b>Cargo Dimentions:</b> ' + req.body.cargoDims +
-  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight
+      '<br><br><b>Commodity and value:</b> ' + req.body.cargoVal +
+  		'<br><br><b>Cargo weight:</b> ' + req.body.cargoWeight +
+      '<br><br><b>Cargo Dimentions:</b> ' + req.body.cargoDims 
   });
   resp.write(JSON.stringify({blah:"blah response"}));
   resp.end();
@@ -69,7 +71,7 @@ app.post('/track-email', function(req, resp) {
 // post from pod modal
 app.post('/pod-email', function(req, resp) {
   sendgrid.send({
-    to: 'loadcon@gsvtransportation.com',
+    to: 'pod@gsvtransportation.com',
     from: 'website-track',
     subject: 'POD request from '+req.body.podName,
     html: '<b>Full name:</b> ' + req.body.podName +

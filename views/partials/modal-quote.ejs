@@ -24,21 +24,11 @@
 
           <input type="date" name="quoteDeliverDate" class="modal-field-half pull-right" id="quoteDeliverDate" placeholder="Delivery date" required>
 
-          <input type="text" name="quoteCargoDims" class="modal-field" id="quoteCargoDims" placeholder="Dimentions of cargo in feet (LxWxH)" required>
+          <input type="text" name="quoteCargoVal" class="modal-field-half pull-left" id="quoteCargoVal" placeholder="Commodity and value" required>
 
+          <input type="text" name="quoteCargoWeight" class="modal-field-half pull-right" id="quoteCargoWeight" placeholder="Cargo weight in lbs" required>
 
-          <div class="modal-weight-btns clearfix">
-            <p class="cargo-weight-txt">Approximate cargo weight in lbs:</p>
-              <label class="selectme">
-                <input class="weightCheckbox" id="quoteCargoWeight" type="checkbox" value="0-3000"><span>0 - 3000 lbs</span>
-              </label>
-              <label class="selectme">
-                <input class="weightCheckbox" id="quoteCargoWeight" type="checkbox" value="3000-5000"><span>3000 - 5000 lbs</span>
-              </label>
-              <label class="selectme">
-                <input class="weightCheckbox" id="quoteCargoWeight" type="checkbox" value="5000+"><span>5000 lbs+</span>
-              </label>
-          </div>
+          <input type="text" name="quoteCargoDims" class="modal-field" id="quoteCargoDims" placeholder="Dimensions of cargo in feet (LxWxH)" required>
         
           <div class="modal-btn-container clearfix">
   			     <button type="submit" class="modal-btn pull-right" id="quote-button">SUBMIT</button>
@@ -57,7 +47,7 @@
           <p class="success-txt">
             Thank you for submitting your request for a quote, a representative will be in touch with you shortly.
           </p>
-          <a class="modal-success-okay" data-dismiss="modal" aria-label="Close">Thanks!</a>
+          <a class="modal-success-okay" id="quoteModalThanks" data-dismiss="modal" aria-label="Close">Thanks!</a>
         </div>
         
       </div>
