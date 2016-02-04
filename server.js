@@ -72,7 +72,7 @@ app.post('/track-email', function(req, resp) {
 app.post('/pod-email', function(req, resp) {
   sendgrid.send({
     to: 'pod@gsvtransportation.com',
-    from: 'website-track',
+    from: 'website-pod',
     subject: 'POD request from '+req.body.podName,
     html: '<b>Full name:</b> ' + req.body.podName +
         '<br><br><b>Phone:</b> ' + req.body.podPhone +
