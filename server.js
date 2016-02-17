@@ -53,6 +53,7 @@ app.post('/track-email', function(req, resp) {
 	  html: '<b>Full name:</b> ' + req.body.trackName +
 	  		'<br><br><b>Phone:</b> ' + req.body.trackPhone +
 	  		'<br><br><b>Email:</b> ' + req.body.trackEmail +
+        '<br><br><b>Track Number:</b> ' + req.body.trackNumber +
 	  		'<br><br><b>Issue:</b> ' + req.body.trackIssue
   	}, function(err, json) {
       if (err) {
